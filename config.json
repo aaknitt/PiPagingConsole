@@ -5,7 +5,7 @@
   "Clear after send": true,
   "Clear after timeout": true,
   "Radio Volume": 10,
-  "Sidetone Volume": 17,
+  "Sidetone Volume": 20,
   "Busy Channel Lockout": true,
   "Busy Channel Lockout Debounce": 3.6,
   "Clear selection timeout": 15,

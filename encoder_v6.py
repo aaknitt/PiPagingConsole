@@ -116,7 +116,7 @@ def play_dtmf(f1,f2,duration,volume,output_device='radio'):
 	#https://stackoverflow.com/questions/1165026/what-algorithms-could-i-use-for-audio-volume-level
 	scale_factor = (math.pow(10,volume)-1)/(10-1)
 	output = np.array(np.sin(times*f1*2*np.pi)*32767.5*scale_factor*.5, dtype=np.int16) + np.array(np.sin(times*f2*2*np.pi)*32767.5*scale_factor*.5, dtype=np.int16)
-	output = np.append(output,np.zeros(int(.01*BITRATE)))
+	output = np.append(output,np.zeros(int(.001*BITRATE)))
 	output = output.astype(np.int16)  #after appending the zeros we need to set the data type back to int16
 	if output_device == 'radio':
 		radiostream.write(output.tobytes())
@@ -129,7 +129,7 @@ def play_tone(frequency,duration,volume,output_device='radio'):
 	#https://stackoverflow.com/questions/1165026/what-algorithms-could-i-use-for-audio-volume-level
 	scale_factor = (math.pow(10,volume)-1)/(10-1)
 	output = np.array(np.sin(times*frequency*2*np.pi)*32767.5*scale_factor, dtype=np.int16)
-	output = np.append(output,np.zeros(int(.01*BITRATE)))  #append some zeros to make sure all audio gets flushed out
+	output = np.append(output,np.zeros(int(.001*BITRATE)))  #append some zeros to make sure all audio gets flushed out
 	output = output.astype(np.int16)  #after appending the zeros we need to set the data type back to int16
 	if output_device == 'radio':
 		radiostream.write(output.tobytes())
