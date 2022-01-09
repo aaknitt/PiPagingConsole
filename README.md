@@ -13,22 +13,15 @@ Two-way radio paging encoder for the Raspberry Pi.  Designed to be used with a t
 - Optional automatic clearing of tone selections during send, after send, or after a timeout
 - Optional PIN number protection for settings
 - JSON file to configure tones
+- Will run on Windows for testing (but without GPIO for PTT and COR)
 
-## Operation
+Works well with Raspberry Pi Touchscreen enclosures such as this one:  https://www.amazon.com/gp/product/B08T5LCTKT
 
 ## Radio Interface
 
 
 ## Tone Configuration JSON file
 A sample JSON configuration file showing examples of two-tone sequential, five-tone sequential (CCIR), and DTMF tones is below.  
-
-#### "tone" objects
-tone objects are used for two-tone and five-tone paging formats and consist of a "freq" and "duration" field for each tone segment.  
-
-### "dtmf" objects
-dtmf objects are used for DTMF paging formats (including Knox) and consist of a "f1", "f2" and "duration" field for each tone segment.  
-
-If a gap is needed between tone segements, simply add an additional segment with frequency (or f1 and f2) set to 0 and duration as desired.  
 
 ```
 {"Tones": 
@@ -39,5 +32,15 @@ If a gap is needed between tone segements, simply add an additional segment with
  ]
 }
 ```
+
+#### "tone" objects
+tone objects are used for two-tone and five-tone paging formats and consist of a "freq" and "duration" field for each tone segment.  
+
+#### "dtmf" objects
+dtmf objects are used for DTMF paging formats (including Knox) and consist of a "f1", "f2" and "duration" field for each tone segment.  
+
+If a gap is needed between tone segements, simply add an additional segment with frequency (or f1 and f2) set to 0 and duration as desired.  
+
+
 
 ## Settings JSON file
