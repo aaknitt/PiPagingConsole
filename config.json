@@ -1,0 +1,14 @@
+{
+  "Sidetone": true,
+  "Alert tone": true,
+  "Clear during send": false,
+  "Clear after send": true,
+  "Clear after timeout": true,
+  "Radio Volume": 10,
+  "Sidetone Volume": 17,
+  "Busy Channel Lockout": true,
+  "Busy Channel Lockout Debounce": 3.6,
+  "Clear selection timeout": 15,
+  "Radio Audio Output Index": 0,
+  "Sidetone Audio Output Index": 6
+}

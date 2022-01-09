@@ -1,0 +1,16 @@
+{"Tones": 
+ [
+  {"description": "Station 1 FIRE", "tone": [{"freq": 1372.9, "duration": 1}, {"freq": 1573.5, "duration": 3}]},
+  {"description": "Station 2 FIRE", "tone": [{"freq": 1555.2, "duration": 1}, {"freq": 1573.5, "duration": 3}]},
+  {"description": "Station 3 FIRE", "tone": [{"freq": 1598.0, "duration": 1}, {"freq": 1573.5, "duration": 3}]},
+  {"description": "Station 4 FIRE", "tone": [{"freq": 1642.0, "duration": 1}, {"freq": 1573.5, "duration": 3}]},
+  {"description": "Station 5 FIRE", "tone": [{"freq": 1185.2, "duration": 1}, {"freq": 1573.5, "duration": 3}]},
+  {"description": "Structure Fire / ALL CALL", "tone": [{"freq": 1513.5, "duration": 7}]},
+  {"description": "Station 1 EMS", "tone": [{"freq": 1687.2, "duration": 1}, {"freq": 1573.5, "duration": 3}]},
+  {"description": "Station 2 EMS", "tone": [{"freq": 1733.7, "duration": 1}, {"freq": 1573.5, "duration": 3}]},
+  {"description": "Station 3 EMS", "tone": [{"freq": 1781.5, "duration": 1}, {"freq": 1573.5, "duration": 3}]},
+  {"description": "Station 4 EMS", "tone": [{"freq": 1830.5, "duration": 1}, {"freq": 1573.5, "duration": 3}]},
+  {"description": "Station 5 EMS", "dtmf": [{"f1": 1321.2,"f2":600, "duration": 1}, {"f1": 1513.5,"f2":700, "duration": 1},{"f1": 1321.2,"f2":600, "duration": 1}]},
+  {"description": "Informational / ALL CALL", "tone": [{"freq": 1881.0, "duration": 1}, {"freq": 1513.5, "duration": 3}]}
+ ]
+}
