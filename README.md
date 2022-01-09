@@ -1,5 +1,7 @@
 # PiPagingConsole
-Two-way radio paging encoder for the Raspberry Pi.  Designed to be used with a touchscreen display.  Currently supports two-tone sequential, 5-tone, and DTMF paging formats.  
+Two-way radio paging encoder for the Raspberry Pi.  Designed to be used with a touchscreen display.  Currently supports two-tone sequential, 5-tone, and DTMF paging formats. 
+
+![Screenshot](https://github.com/aaknitt/PiPagingConsole/blob/main/images/MainScreen.PNG)
 
 ## Features
 - Uses the Raspberry Pi's onboard sound card to send audio to the radio.
