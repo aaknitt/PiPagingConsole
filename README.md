@@ -16,6 +16,9 @@ Two-way radio paging encoder for the Raspberry Pi.  Designed to be used with a t
 
 ## Operation
 
+## Radio Interface
+
+
 ## Tone Configuration JSON file
 A sample JSON configuration file showing examples of two-tone sequential, five-tone sequential (CCIR), and DTMF tones is below.  
 
