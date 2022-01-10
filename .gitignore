@@ -129,8 +129,11 @@ dmypy.json
 .pyre/
 
 # MY STUFF
-.txt
-encoder.
+*.txt
+encoder*
 tones_wauk.json
 tones_with_dtmf.json
 LevelMeter.py
+test.py
+build.bat
+build.sh
