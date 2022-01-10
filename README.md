@@ -6,6 +6,7 @@ Two-way radio paging encoder for the Raspberry Pi.  Designed to be used with a t
 ## Features
 - Uses the Raspberry Pi's onboard sound card to send audio to the radio.
 - Select multiple tones to send as a "stacked page"
+- Currently supports up to 12 tone sets (more possible with GUI reconfiguration)
 - GPIO pins used to control radio transmit (external transistor circuit required)
 - Optional Busy Channel Lockout using radio COR output
 - Optional sidetone audio output using a second audio output device
@@ -17,12 +18,17 @@ Two-way radio paging encoder for the Raspberry Pi.  Designed to be used with a t
 
 Works well with Raspberry Pi Touchscreen enclosures such as this one:  https://www.amazon.com/gp/product/B08T5LCTKT
 
+## Operation
+To use the paging console, simply select the tone desired paging tone buttons and click "send".  If the Busy Channel Lockout function is turned on and there is already radio traffic on the channel (as determined by the COR input), an alert tone will be issued and the tones will not be sent until the channel is not busy or the user selects the override button.  
+
+Once the channel is clear (or if the busy channel lockout function is not used), the PTT output will be activated and all selected pages will be sent in sequence.  After all tones have been sent, the GUI will indicate that the voice message can be sent (using the radio's microphone).
+
 ## Radio Interface
 The script uses GPIO pins on the Raspberry Pi to interface with the two-way radio PTT input and (optionally) COR output.  Pin 11 of the I/O connector (GPIO17) is used as the PTT output and pin 15 of the I/O connector (GPIO22) is used as the COR input.  The PTT output is active high from the Raspberry Pi and is intended to drive a 2N3904 (or similar) transistor in open collector configuration to interface with a radio that expects the PTT line to be active low (ground the pin to activate PTT).
 
 ![PTT Circuit](https://github.com/aaknitt/PiPagingConsole/blob/main/images/PTTcircuit.PNG)
 
-The COR input is pulled up internally in the Raspberry Pi and is considered active when pulled low.  If the radio has an active high COR output an additional interface circuit may be required to change polarity.
+The COR input is pulled up internally in the Raspberry Pi and is considered active when pulled low.  The Raspberry Pi GPIO are rated for 3.3V logic levels.  If the radio has an active high COR output or an active low output that is pulled up to battery voltage, an additional interface circuit may be required to shift levels and/or change polarity.
 
 Future versions of the software may allow for GPIO configuration/selection in the config.json file.  An add-on shield for the Raspberry Pi with multiple PTT and COR circuits (to support multiple radios and/or channel steering with a single paging console) is in development.  
 
@@ -50,6 +56,7 @@ If a gap is needed between tone segements, simply add an additional segment with
 
 ## Settings Menu & PIN
 ![Settings](https://github.com/aaknitt/PiPagingConsole/blob/main/images/Settings.PNG) ![PINentry](https://github.com/aaknitt/PiPagingConsole/blob/main/images/PINentry.PNG)
+
 Settings are stored in the config.json file.  The settings may be changed by clicking the "Settings" button on the main screen.  The settings menu may be optionally protected by a PIN number specified in the config.json file (note that the PIN is specified in the JSON as a numeric string):
 ```
 "Settings PIN":"12345"
