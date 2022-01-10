@@ -1,13 +1,4 @@
 #Copyright 2022 Andy Knitt
-#
-#TO DO
-# - flush audio
-# - Multiple radio PTT GPIO options - add to config.json
-# - Channel steering GPIO options - add to config.json
-# - Shutdown Pi in settings menu
-# - Button colors in json file
-# - Auto layout for more than 12 tone sets - adjust widths & fonts?
-# - Audio files for BCL and "tones done sending" instead of beeps?
 
 from tkinter import *
 from tkinter import ttk
