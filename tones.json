@@ -2,6 +2,6 @@
  [
   {"description": "Two Tone Example", "tone": [{"freq": 1372.9, "duration": 1}, {"freq": 1573.5, "duration": 3}]},
   {"description": "Five Tone Example", "tone": [{"freq": 1124, "duration": 0.1}, {"freq": 1197, "duration": 0.1}, {"freq": 1275, "duration": 0.1}, {"freq": 1358, "duration": 0.1}, {"freq": 1446, "duration": 0.1}]},
-  {"description": "DTMF Example", "dtmf": [{"f1": 1321.2,"f2":600, "duration": 0.5}, {"f1":0,"f2":0,"duration":1},{"f1": 1513.5,"f2":700, "duration": 0.5},{"f1": 1321.2,"f2":600, "duration": 0.5}]}
+  {"description": "DTMF Example", "dtmf": [{"f1": 1321.2,"f2":600, "duration": 0.5},{"f1": 1513.5,"f2":700, "duration": 0.5},{"f1": 1321.2,"f2":600, "duration": 0.5}]}
  ]
 }

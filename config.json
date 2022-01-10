@@ -10,5 +10,6 @@
   "Busy Channel Lockout Debounce": 3.6,
   "Clear selection timeout": 15,
   "Radio Audio Output Index": 0,
-  "Sidetone Audio Output Index": 6
+  "Sidetone Audio Output Index": 6,
+  "Settings PIN": "12345"
 }
